@@ -1,7 +1,7 @@
 Opinionated Syntax Highlighting For PostgreSQL In Vim!
 ====
 
-I started with [http://www.gunduz.org/postgresql/pgsql.vim](Devrim Gunduz' psql.vim), but very little of that remains. This is PG highlighting the way I use it. It may be useful to you, it may not. I suspect it will work very well for most, and if not, it's not too hard to fork.
+I started with Devrim Gunduz' psql.vim at http://www.gunduz.org/postgresql/pgsql.vim, but very little of that remains. This is PG highlighting the way I use it. It may be useful to you, it may not. I suspect it will work very well for most, and if not, it's not too hard to fork.
 
 Some improvements:
 
