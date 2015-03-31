@@ -50,24 +50,25 @@ syn match pgNumber "\<0x[abcdefABCDEF0-9]*\>"
 syn match pgCommand "\\[A-Za-z][A-Za-z0-9]*"
 
 syn keyword pgConstant both btree current_date current_timestamp false found gin gist null plpgsql sql tg_table_name true
+syn keyword pgConstant unique_violation contained containedin=pgCode
 
 syn match pgLabel "<<\w\+>>"
 
-syn keyword pgKeyword abort alter after aggregate all analyze and any alias add array
+syn keyword pgKeyword abort alter after aggregate all analyze and any alias add array asc
 syn keyword pgKeyword begin by before between
 syn keyword pgKeyword commit continue conversion cascade class close constant
 syn keyword pgKeyword cluster checkpoint comment
 syn keyword pgKeyword case cast cascade character check column columns constraint copy cross
 syn keyword pgKeyword database domain databases default delete distinct drop declare deallocate desc
 syn keyword pgKeyword deferrable deferred defaults do diagnostics
-syn keyword pgKeyword else exception explain elsif encrypted end enum exists execute exclusion exception except exit
+syn keyword pgKeyword else exception exclusive explain elsif encrypted end enum exists execute exclusion exception except exit
 syn keyword pgKeyword function functions foreach foreign from full fetch force for
 syn keyword pgKeyword group grant global get
 syn keyword pgKeyword having 
 syn keyword pgKeyword ilike including index into immutable inner initially immediate inherits instead insert in inout if is interval
 syn keyword pgKeyword join
 syn keyword pgKeyword language last lock local like limit left load login loop
-syn keyword pgKeyword max maxvalue min minvalue move match
+syn keyword pgKeyword max maxvalue min minvalue mode move match
 syn keyword pgKeyword not notice notify no next nulls
 syn keyword pgKeyword offset or operator outer order on out open over
 syn keyword pgKeyword prepare primary password primary privilege procedure partial prepared
@@ -110,7 +111,7 @@ syn match pgVariable "\<_[A-Za-z0-9][A-Za-z0-9_]*\>"
 syn match pgVariable "\$[0-9]\+" 
 syn keyword pgvariable new old tg_op tg_when
 
-syn keyword pgType anyarray anyelement bigint bigserial boolean bytea date geography geometry hstore int integer numeric point record serial text timestamp uuid void
+syn keyword pgType anyarray anyelement bigint bigserial boolean bytea char date geography geometry hstore int integer ltree numeric point record serial text time timestamp uuid void
 
 syn keyword pgKey key contained
 syn keyword pgKeyword primary nextgroup=pgKey skipwhite skipempty foreign nextgroup=pgKey skipwhite skipempty 
@@ -127,16 +128,17 @@ com! -nargs=+ PGMatchFunction call <SID>MatchFunction(<f-args>)
 PGMatchFunction akeys array_agg array_length array_remove array_to_string array_upper
 PGMatchFunction ceil char_length coalesce count
 PGMatchFunction each extract
-PGMatchFunction floor
+PGMatchFunction floor format
+PGMatchFunction generate_series
 PGMatchFunction hstore
-PGMatchFunction lower
+PGMatchFunction lower lpad
 PGMatchFunction md5
-PGMatchFunction nextval
+PGMatchFunction nextval nullif
 PGMatchFunction octet_length
 PGMatchFunction position pg_typeof
 PGMatchFunction quote_ident quote_literal
-PGMatchFunction regexp_matches regexp_replace replace round row_number
-PGMatchFunction skeys
+PGMatchFunction regexp_matches regexp_replace regexp_split_to_array replace round row_number
+PGMatchFunction skeys sprintf
 PGMatchFunction st_distance st_setsrid st_makepoint
 PGMatchFunction string_to_array substring sum svals
 PGMatchFunction plainto_tsquery to_tsvector trim
