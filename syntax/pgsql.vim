@@ -111,7 +111,7 @@ syn match pgVariable "\<_[A-Za-z0-9][A-Za-z0-9_]*\>"
 syn match pgVariable "\$[0-9]\+" 
 syn keyword pgvariable new old tg_op tg_when
 
-syn keyword pgType anyarray anyelement bigint bigserial boolean bytea char date geography geometry hstore int integer ltree numeric point record regclass serial text time timestamp uuid void
+syn keyword pgType anyarray anyelement bigint bigserial boolean bytea char date geography geometry hstore inet int integer ltree numeric point record regclass serial text time timestamp uuid void
 
 syn keyword pgKey key contained
 syn keyword pgKeyword primary nextgroup=pgKey skipwhite skipempty foreign nextgroup=pgKey skipwhite skipempty 
@@ -141,6 +141,7 @@ PGMatchFunction regexp_matches regexp_replace regexp_split_to_array replace roun
 PGMatchFunction skeys sprintf
 PGMatchFunction st_distance st_setsrid st_makepoint
 PGMatchFunction string_to_array substring sum svals
+PGMatchFunction to_char
 PGMatchFunction plainto_tsquery to_tsvector trim
 PGMatchFunction upper uuid_generate_v4 unnest
 PGMatchFunction year
