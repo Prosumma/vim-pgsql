@@ -60,8 +60,8 @@ syn keyword pgKeyword commit continue conversion cascade class close constant
 syn keyword pgKeyword cluster checkpoint comment
 syn keyword pgKeyword case cast cascade character check column columns constraint copy cross
 syn keyword pgKeyword database domain databases default delete distinct drop declare deallocate desc
-syn keyword pgKeyword deferrable deferred defaults do diagnostics
-syn keyword pgKeyword else exception exclusive explain elsif encrypted end enum exists execute exclusion exception except exit
+syn keyword pgKeyword deferrable deferred defaults do diagnostics disable
+syn keyword pgKeyword else exception exclusive explain elsif enable encrypted end enum exists execute exclusion exception except exit
 syn keyword pgKeyword function functions foreach foreign from full fetch force for
 syn keyword pgKeyword group grant global get
 syn keyword pgKeyword having 
@@ -77,10 +77,10 @@ syn keyword pgKeyword query
 syn keyword pgKeyword raise recursive role replace reindex release reset revoke rollback references row rows rowtype rule restrict
 syn keyword pgKeyword return returning
 syn keyword pgKeyword select sequences set strict schema sequence savepoint simple some system stable setof
-syn keyword pgKeyword truncate to transaction table tables temp temporary tablespace then trigger
-syn keyword pgKeyword update union unique unlisten usage using
+syn keyword pgKeyword truncate to transaction table tables temp temporary tablespace then trigger type
+syn keyword pgKeyword update union unique unlisten usage user using
 syn keyword pgKeyword variadic verbose view values varying vacuum volatile
-syn keyword pgKeyword when where
+syn keyword pgKeyword when where work
 
 syn region pgCheck start="(" end=")" contained contains=TOP
 syn keyword pgKeyword check nextgroup=pgCheck skipwhite skipempty
@@ -127,6 +127,7 @@ com! -nargs=+ PGMatchFunction call <SID>MatchFunction(<f-args>)
 
 PGMatchFunction akeys array_agg array_length array_remove array_to_string array_upper
 PGMatchFunction ceil char_length coalesce count
+PGMatchFunction date_part
 PGMatchFunction each extract
 PGMatchFunction floor format
 PGMatchFunction generate_series
