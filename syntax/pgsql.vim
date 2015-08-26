@@ -54,7 +54,7 @@ syn keyword pgConstant unique_violation contained containedin=pgCode
 
 syn match pgLabel "<<\w\+>>"
 
-syn keyword pgKeyword abort alter after aggregate all analyze and any alias add array asc
+syn keyword pgKeyword abort alter after aggregate all analyze and any alias add array asc at
 syn keyword pgKeyword begin by before between
 syn keyword pgKeyword commit continue conversion cascade class close constant
 syn keyword pgKeyword cluster checkpoint comment
@@ -77,10 +77,11 @@ syn keyword pgKeyword query
 syn keyword pgKeyword raise recursive role replace reindex release reset revoke rollback references row rows rowtype rule restrict
 syn keyword pgKeyword return returning
 syn keyword pgKeyword select sequences set strict schema sequence savepoint simple some system stable setof
-syn keyword pgKeyword truncate to transaction table tables temp temporary tablespace then trigger type
+syn keyword pgKeyword triggers truncate to transaction table tables temp temporary tablespace time then trigger type
 syn keyword pgKeyword update union unique unlisten usage user using
 syn keyword pgKeyword variadic verbose view values varying vacuum volatile
 syn keyword pgKeyword when where work
+syn keyword pgKeyword zone
 
 syn region pgCheck start="(" end=")" contained contains=TOP
 syn keyword pgKeyword check nextgroup=pgCheck skipwhite skipempty
@@ -127,8 +128,8 @@ com! -nargs=+ PGMatchFunction call <SID>MatchFunction(<f-args>)
 
 PGMatchFunction akeys array_agg array_length array_remove array_to_string array_upper
 PGMatchFunction ceil char_length coalesce count
-PGMatchFunction date_part
-PGMatchFunction each extract
+PGMatchFunction date_part digest
+PGMatchFunction each encode extract
 PGMatchFunction floor format
 PGMatchFunction generate_series
 PGMatchFunction hstore
@@ -138,11 +139,11 @@ PGMatchFunction nextval nullif
 PGMatchFunction octet_length
 PGMatchFunction position pg_typeof
 PGMatchFunction quote_ident quote_literal
-PGMatchFunction regexp_matches regexp_replace regexp_split_to_array replace round row_number
+PGMatchFunction random regexp_matches regexp_replace regexp_split_to_array replace round row_number
 PGMatchFunction skeys sprintf
 PGMatchFunction st_distance st_setsrid st_makepoint
 PGMatchFunction string_to_array substring sum svals
-PGMatchFunction to_char
+PGMatchFunction to_char to_hex
 PGMatchFunction plainto_tsquery to_tsvector trim
 PGMatchFunction upper uuid_generate_v4 unnest
 PGMatchFunction year
