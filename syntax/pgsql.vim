@@ -4,14 +4,14 @@
 " License: MIT
 " Last Change:  $Date: 2014/09/10 20:40:00 $
 " Filenames:    *.psql *.pgsql *.plpgsql
-" URL:		http://www.revolucent.net
+" URL:		http://gregoryhigley.me
 " Note:   This file began with work done by Devrim Gunduz (devrim@postgresql.org).
 "         Very little of his original work remains,
 "         but I consider it proper to give him credit where credit is due. I
 "         ask that if you create a derivative work, you credit both Gregory
 "         Higley and Devrim Gunduz.
 "
-" Copyright (c) 2014 Gregory Higley
+" Copyright (c) 2014, 2015 Gregory Higley
 "
 " Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
 " files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
