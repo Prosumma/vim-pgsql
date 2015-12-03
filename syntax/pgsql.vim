@@ -138,7 +138,7 @@ PGMatchFunction nextval nullif
 PGMatchFunction octet_length
 PGMatchFunction position pg_typeof
 PGMatchFunction quote_ident quote_literal
-PGMatchFunction random regexp_matches regexp_replace regexp_split_to_array replace round row_number
+PGMatchFunction random regexp_matches regexp_replace regexp_split_to_array replace round row_number row_to_json
 PGMatchFunction skeys sprintf
 PGMatchFunction st_distance st_setsrid st_makepoint
 PGMatchFunction string_to_array substring sum svals
